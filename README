@@ -1,0 +1,12 @@
+Water effect for KWin/KDE4.
+
+Questions and bugs to: Michal Srb <michalsrb@gmail.com>
+
+This effect depends on OpenGL and its GL_EXT_framebuffer_object extension.
+If you do not see any waves, it can be because your graphics card (or driver) doesn't support this extension.
+
+This is 0.0.1 version - first introduction and test.
+Take it like a demo, far from final product.
+I plan to add more options and more useful things, e.q. Wave notification feature..
+
+..and be tolerant to my English, thanks. ;-)

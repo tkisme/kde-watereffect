@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KCModule
+
+X-KDE-Library=kcm_kwin4_effect_watereffect
+X-KDE-ParentComponents=kwin4_effect_watereffect
+X-KDE-PluginKeyword=watereffect
+
+Name=Water effect
+Name[cs]=Vodní efekt
