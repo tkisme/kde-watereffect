@@ -28,7 +28,7 @@ namespace KWin
 class GLRenderTarget;
 class GLTexture;
 
-class WaterEffect : public QObject, public Effect
+class WaterEffect : public Effect
 {
   Q_OBJECT
   class Wave

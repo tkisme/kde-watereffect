@@ -102,7 +102,7 @@ void WaterEffect::reconfigure(/*ReconfigureFlags*/)
   texture = new GLTexture(texw, texh);
   texture->setFilter(GL_NEAREST_MIPMAP_LINEAR); // I was searching which filter would be best. In my opinion, this effect looks best with the worse filter, so I hardcoded it without respect to global settings.
   if(renderTarget) delete renderTarget;
-  renderTarget = new GLRenderTarget(texture);
+  renderTarget = new GLRenderTarget(*texture);
   if(!renderTarget->valid())
     valid = false;
 
@@ -173,9 +173,9 @@ void WaterEffect::paintScreen( int mask, QRegion region, ScreenPaintData& data )
     effects->paintScreen( mask, region, data );
     return;
   }
-  effects->pushRenderTarget(renderTarget);
+  //effects->pushRenderTarget(renderTarget);
   effects->paintScreen( mask, region, data );
-  effects->popRenderTarget();
+  //effects->popRenderTarget();
 
   texture->bind();
 
