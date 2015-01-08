@@ -17,41 +17,11 @@ $ cd watereffect-0.0.1
 $ mkdir build
 $ cd build
 
-
-2) Optionally - set environment variables if necessary.
-For example I use KDE3.5 and have QT4 and KDE4 installed from svn in unusual directories, so I must set:
-
-$ export QTDIR=/usr/lib/qt4svn
-$ export PATH=$QTDIR/bin:$PATH
-$ export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
-$ export PKG_CONFIG_PATH=$QTDIR/lib:$PKG_CONFIG_PATH
-$ export KDEDIR=/usr/lib/kde4svn
-$ export PATH=$KDEDIR/bin:$PATH
-$ export LD_LIBRARY_PATH=$KDEDIR/lib:$LD_LIBRARY_PATH
-$ export QT_PLUGIN_PATH=$KDEDIR/lib/kde4/plugins
-$ export KDEDIRS=$KDEDIR
-$ export KDEHOME=$HOME/.kde4
-
-Another sample - Kubuntu 8.04 with KDE4 from ppa.launchpad.net:
-
-$ export QTDIR=/usr/lib/qt4
-$ .....
-$ export KDEDIR=/usr/lib/kde4
-$ ....
-$ export QT_PLUGIN_PATH=$KDEDIR/lib/kde4/plugins
-$ ....
-
-If KDE4 is "natural" for your distribution (e.q. in Kubuntu 8.10), you can skip this step.
-
-
-3) Configure.
+2) Configure.
 Watereffect use Cmake as well as whole KDE. In fact I used some CMakeLists.txt from KDE and I hope this effect will be added to the official effects in future.
 So, run cmake in your build folder, argument it and point it to the source (upper dir):
 
-$ cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/usr ..
-
-The prefix can be something else, e.q. /usr/lib/kde4svn or /usr/lib/kde for examples above.
-
+$cmake -DCMAKE_INSTALL_PREFIX=$( kde4-config --prefix ) -DCMAKE_BUILD_TYPE=release ..
 
 4) Finally build.
 Unexpectedly:
